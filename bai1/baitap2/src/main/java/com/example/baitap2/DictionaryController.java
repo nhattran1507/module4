@@ -1,24 +1,17 @@
 package com.example.baitap2;
 
+import com.example.baitap2.service.DictionaryService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import java.util.HashMap;
-import java.util.Map;
-
 @Controller
 public class DictionaryController {
-    private static final Map<String, String> dictionary = new HashMap<>();
 
-    static {
-        dictionary.put("hello", "xin chào");
-        dictionary.put("world", "thế giới");
-        dictionary.put("car", "ô tô");
-        dictionary.put("minhnhat", "Đẹp trai");
-        dictionary.put("spring", "mùa xuân hoặc Spring Framework");
-    }
+    @Autowired
+    private DictionaryService dictionaryService;
 
     @GetMapping("/")
     public String showForm() {
@@ -27,7 +20,7 @@ public class DictionaryController {
 
     @GetMapping("/translate")
     public String translate(@RequestParam("word") String word, Model model) {
-        String result = dictionary.get(word.toLowerCase());
+        String result = dictionaryService.translateWord(word);
         if (result != null) {
             model.addAttribute("word", word);
             model.addAttribute("translation", result);

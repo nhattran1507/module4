@@ -5,7 +5,7 @@
   Time: 09:32
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html>
 <head>
@@ -41,7 +41,7 @@
     </div>
 </nav>
 <div class="container">
-    <button class="btn btn-primary m-4" onclick="window.location.href='/student?action=create'">Thêm mới</button>
+    <button class="btn btn-primary m-4" onclick="window.location.href='/students/create'">Thêm mới</button>
     <table class="table table-hover">
         <thead>
             <tr>
@@ -79,7 +79,7 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
-                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal" onclick="window.location.href='/student?action=delete&id=${student.code}'">Xác nhận</button>
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal" onclick="window.location.href='/students/${student.code}/delete'">Xác nhận</button>
                                 </div>
                             </div>
                         </div>

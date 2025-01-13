@@ -18,7 +18,7 @@ public class CurrencyController {
 
     @GetMapping("/")
     public String showForm() {
-        return "index"; // Điều hướng về trang nhập liệu
+        return "index";
     }
 
     @PostMapping("/")

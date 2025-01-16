@@ -23,8 +23,13 @@ public class ProductRepository implements IProductRepository {
 
     @Override
     public Product findById(Long id) {
-        return entityManager.find(Product.class, id);
+        Product product = entityManager.find(Product.class, id);
+        if (product == null) {
+            throw new RuntimeException("Product not found");
+        }
+        return product;
     }
+
 
     @Transactional
     @Override
@@ -35,5 +40,22 @@ public class ProductRepository implements IProductRepository {
         } catch (Exception e) {
             return false;
         }
+    }
+    @Transactional
+    @Override
+    public void delete(Long id) {
+        Product product = findById(id);
+        if (product != null) {
+            entityManager.remove(product);
+        } else {
+            throw new RuntimeException("Product not found");
+        }
+    }
+    @Override
+    public List<Product> findByName(String name) {
+        TypedQuery<Product> query = entityManager.createQuery(
+                "SELECT p FROM Product p WHERE p.name LIKE :name", Product.class);
+        query.setParameter("name", "%" + name + "%");
+        return query.getResultList();
     }
 }

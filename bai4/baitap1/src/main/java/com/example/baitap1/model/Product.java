@@ -1,11 +1,20 @@
 package com.example.baitap1.model;
 
+import javax.persistence.*;
+
+@Entity
 public class Product {
-    private Long id; // Mã sản phẩm
-    private String name; // Tên sản phẩm
-    private double price; // Giá sản phẩm
-    private String description; // Mô tả sản phẩm
-    private String manufacturer; // Nhà sản xuất
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String name;
+
+    private double price;
+
+    private String description;
+
+    private String manufacturer;
 
     // Constructor không tham số
     public Product() {
@@ -59,16 +68,5 @@ public class Product {
 
     public void setManufacturer(String manufacturer) {
         this.manufacturer = manufacturer;
-    }
-
-    @Override
-    public String toString() {
-        return "Product{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", price=" + price +
-                ", description='" + description + '\'' +
-                ", manufacturer='" + manufacturer + '\'' +
-                '}';
     }
 }

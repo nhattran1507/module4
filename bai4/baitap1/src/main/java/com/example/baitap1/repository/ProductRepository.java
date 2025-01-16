@@ -1,51 +1,39 @@
 package com.example.baitap1.repository;
 
 import com.example.baitap1.model.Product;
+
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.TypedQuery;
+import javax.transaction.Transactional;
 import org.springframework.stereotype.Repository;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Repository
-public class ProductRepository {
-    private static List<Product> products = new ArrayList<>();
+public class ProductRepository implements IProductRepository {
 
-    static {
-        products.add(new Product(1L, "Laptop", 1000, "High-performance laptop", "Dell"));
-        products.add(new Product(2L, "Smartphone", 500, "Latest model smartphone", "Samsung"));
-    }
+    @PersistenceContext
+    private EntityManager entityManager;
 
+    @Override
     public List<Product> findAll() {
-        return new ArrayList<>(products);
+        TypedQuery<Product> query = entityManager.createQuery("from Product", Product.class);
+        return query.getResultList();
     }
 
+    @Override
     public Product findById(Long id) {
-        return products.stream().filter(p -> p.getId().equals(id)).findFirst().orElse(null);
+        return entityManager.find(Product.class, id);
     }
 
-    public void save(Product product) {
-        products.add(product);
-    }
-
-    public void update(Long id, Product product) {
-        Product existing = findById(id);
-        if (existing != null) {
-            existing.setName(product.getName());
-            existing.setPrice(product.getPrice());
-            existing.setDescription(product.getDescription());
-            existing.setManufacturer(product.getManufacturer());
+    @Transactional
+    @Override
+    public boolean save(Product product) {
+        try {
+            entityManager.persist(product);
+            return true;
+        } catch (Exception e) {
+            return false;
         }
     }
-
-    public void delete(Long id) {
-        products.removeIf(p -> p.getId().equals(id));
-    }
-
-    public List<Product> searchByName(String name) {
-        return products.stream()
-                .filter(p -> p.getName().toLowerCase().contains(name.toLowerCase()))
-                .collect(Collectors.toList());
-    }
 }
-
-

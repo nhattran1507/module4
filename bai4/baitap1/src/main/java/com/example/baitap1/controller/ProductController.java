@@ -6,64 +6,43 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
 @RequestMapping("/")
 public class ProductController {
 
-    private final IProductService productService;
-
-    // Constructor Injection
     @Autowired
-    public ProductController(IProductService productService) {
-        this.productService = productService;
-    }
+    private IProductService productService;
 
-    @GetMapping
-    public String list(Model model) {
+    @GetMapping("")
+    public String showList(Model model) {
         model.addAttribute("products", productService.findAll());
         return "product/list";
     }
 
+    @GetMapping("/detail")
+    public String detail1(@RequestParam(required = false, defaultValue = "1") Long id, Model model) {
+        model.addAttribute("product", productService.findById(id));
+        return "product/detail";
+    }
+
+    @GetMapping("/detail/{id}")
+    public String detail2(@PathVariable(name = "id", required = false) Long id, Model model) {
+        model.addAttribute("product", productService.findById(id));
+        return "product/detail";
+    }
+
     @GetMapping("/create")
-    public String createForm(Model model) {
+    public String showFormCreate(Model model) {
         model.addAttribute("product", new Product());
         return "product/create";
     }
 
     @PostMapping("/create")
-    public String create(@ModelAttribute Product product) {
+    public String save(@ModelAttribute Product product, RedirectAttributes redirectAttributes) {
         productService.save(product);
+        redirectAttributes.addFlashAttribute("mess", "Product added successfully");
         return "redirect:/";
-    }
-
-    @GetMapping("/edit/{id}")
-    public String editForm(@PathVariable Long id, Model model) {
-        model.addAttribute("product", productService.findById(id));
-        return "product/edit";
-    }
-
-    @PostMapping("/edit/{id}")
-    public String edit(@PathVariable Long id, @ModelAttribute Product product) {
-        productService.update(id, product);
-        return "redirect:/";
-    }
-
-    @GetMapping("/delete/{id}")
-    public String delete(@PathVariable Long id) {
-        productService.delete(id);
-        return "redirect:/";
-    }
-
-    @GetMapping("/{id}")
-    public String view(@PathVariable Long id, Model model) {
-        model.addAttribute("product", productService.findById(id));
-        return "product/view";
-    }
-
-    @GetMapping("/search")
-    public String search(@RequestParam String name, Model model) {
-        model.addAttribute("products", productService.searchByName(name));
-        return "product/list";
     }
 }

@@ -5,25 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="500a830c-41f7-4a21-8ddd-5628b6ae4174" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/product/detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bai5/blog/src/main/java/com/example/blog/controller/BlogController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bai5/blog/src/main/java/com/example/blog/controller/CustomErrorController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bai5/blog/src/main/java/com/example/blog/entity/Blog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bai5/blog/src/main/java/com/example/blog/exception/BlogNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bai5/blog/src/main/java/com/example/blog/exception/GlobalExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bai5/blog/src/main/java/com/example/blog/exception/ResourceNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bai5/blog/src/main/java/com/example/blog/repository/IBlogRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bai5/blog/src/main/java/com/example/blog/service/IBlogService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bai5/blog/src/main/java/com/example/blog/service/IService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bai5/blog/src/main/java/com/example/blog/service/impl/BlogService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bai5/blog/src/main/resources/templates/blog/404.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bai5/blog/src/main/resources/templates/blog/add.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bai5/blog/src/main/resources/templates/blog/detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bai5/blog/src/main/resources/templates/blog/edit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bai5/blog/src/main/resources/templates/blog/error.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bai5/blog/src/main/resources/templates/blog/list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/product/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/product/list.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,6 +179,7 @@
       <workItem from="1737096614821" duration="626000" />
       <workItem from="1737169160989" duration="593000" />
       <workItem from="1737270866635" duration="5375000" />
+      <workItem from="1737336400581" duration="667000" />
     </task>
     <servers />
   </component>

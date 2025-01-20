@@ -58,6 +58,7 @@
         <td th:text="${product.description}"></td>
         <td th:text="${product.manufacturer}"></td>
         <td>
+          <a th:href="@{/detail/{id}(id=${product.id})}" class="btn btn-info btn-sm">View Details</a>
           <a th:href="@{/edit/{id}(id=${product.id})}" class="btn btn-warning btn-sm">Edit</a>
           <a th:href="@{/delete/{id}(id=${product.id})}" class="btn btn-danger btn-sm">Delete</a>
         </td>

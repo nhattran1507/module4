@@ -5,26 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="500a830c-41f7-4a21-8ddd-5628b6ae4174" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/baitap1/repository/IProductRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_jpa_c08/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_jpa_c08/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_jpa_c08/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_jpa_c08/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_jpa_c08/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_jpa_c08/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_jpa_c08/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_jpa_c08/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../bai2/baitap1/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../bai2/baitap1/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../bai2/baitap1/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../bai2/baitap1/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/product/detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai5/blog/src/main/java/com/example/blog/controller/BlogController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai5/blog/src/main/java/com/example/blog/controller/CustomErrorController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai5/blog/src/main/java/com/example/blog/entity/Blog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai5/blog/src/main/java/com/example/blog/exception/BlogNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai5/blog/src/main/java/com/example/blog/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai5/blog/src/main/java/com/example/blog/exception/ResourceNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai5/blog/src/main/java/com/example/blog/repository/IBlogRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai5/blog/src/main/java/com/example/blog/service/IBlogService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai5/blog/src/main/java/com/example/blog/service/IService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai5/blog/src/main/java/com/example/blog/service/impl/BlogService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai5/blog/src/main/resources/templates/blog/404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai5/blog/src/main/resources/templates/blog/add.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai5/blog/src/main/resources/templates/blog/detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai5/blog/src/main/resources/templates/blog/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai5/blog/src/main/resources/templates/blog/error.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai5/blog/src/main/resources/templates/blog/list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/baitap1/config/AppConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/baitap1/config/AppConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/baitap1/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/baitap1/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/baitap1/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/baitap1/model/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/baitap1/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/baitap1/repository/ProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/baitap1/service/IProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/baitap1/service/IProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/baitap1/service/impl/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/baitap1/service/impl/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/product/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/product/list.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +39,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -63,10 +63,12 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;Gradle.Build baitap1.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;Tomcat Server.Tomcat 9.0.98.executor&quot;: &quot;Run&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;D:/Codegym/module4/bai4/baitap1/src/main/java/com/example/baitap1/config&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -190,6 +192,11 @@
       <workItem from="1736904695695" duration="501000" />
       <workItem from="1736929030269" duration="1830000" />
       <workItem from="1736945475183" duration="1076000" />
+      <workItem from="1737029741512" duration="3304000" />
+      <workItem from="1737076228544" duration="3000" />
+      <workItem from="1737096614821" duration="626000" />
+      <workItem from="1737169160989" duration="593000" />
+      <workItem from="1737270866635" duration="5375000" />
     </task>
     <servers />
   </component>

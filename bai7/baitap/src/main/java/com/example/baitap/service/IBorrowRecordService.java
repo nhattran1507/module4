@@ -1,6 +1,6 @@
 package com.example.baitap.service;
 
-import com.example.book_management.model.BorrowRecord;
+import com.example.baitap.model.BorrowRecord;
 
 import java.util.List;
 

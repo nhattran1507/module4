@@ -1,7 +1,7 @@
 package com.example.baitap.repository;
 
 
-import com.example.book_management.model.BorrowRecord;
+import com.example.baitap.model.BorrowRecord;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface BorrowRecordRepository extends JpaRepository<BorrowRecord, Integer> {

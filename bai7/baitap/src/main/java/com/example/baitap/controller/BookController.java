@@ -1,8 +1,8 @@
 package com.example.baitap.controller;
 
-import com.example.book_management.model.Book;
-import com.example.book_management.service.IBookService;
-import com.example.book_management.service.IBorrowRecordService;
+import com.example.baitap.model.Book;
+import com.example.baitap.service.IBookService;
+import com.example.baitap.service.IBorrowRecordService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

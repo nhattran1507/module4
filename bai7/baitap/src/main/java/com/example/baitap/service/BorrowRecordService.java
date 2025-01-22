@@ -1,9 +1,9 @@
 package com.example.baitap.service;
 
-import com.example.book_management.model.Book;
-import com.example.book_management.model.BorrowRecord;
-import com.example.book_management.repository.BookRepository;
-import com.example.book_management.repository.BorrowRecordRepository;
+import com.example.baitap.model.Book;
+import com.example.baitap.model.BorrowRecord;
+import com.example.baitap.repository.BookRepository;
+import com.example.baitap.repository.BorrowRecordRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

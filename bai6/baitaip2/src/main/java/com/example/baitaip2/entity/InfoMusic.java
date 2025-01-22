@@ -23,18 +23,18 @@ public class InfoMusic {
     @NotBlank(message = "tên bài hát không được để trống")
     @Size(max = 800,message = "Tên bài hát không được quá 800 ký tự")
     @Pattern(regexp = "^[^@;,.=\\-+*/]*$", message = "Tên bài hát không được chứa ký tự đặc biệt")
-    @Column(name = "name_music",columnDefinition = "VARCHAR(800)")
+    @Column(name = "name_music",columnDefinition = "TEXT")
     private String nameMusic;
 
     @NotBlank(message = "Nghệ sĩ thể hiện không được để trống")
     @Size(max = 300, message = "Nghệ sĩ thể hiện không được vượt quá 300 ký tự")
     @Pattern(regexp = "^[^@;,.=\\-+]*$", message = "Nghệ sĩ thể hiện không được chứa ký tự đặc biệt")
-    @Column(name = "actor",columnDefinition = "VARCHAR(300)")
+    @Column(name = "actor",columnDefinition = "TEXT")
     private String actor;
 
     @NotBlank(message = "Thể loại nhạc không được để trống")
     @Size(max = 1000, message = "Thể loại nhạc không được vượt quá 1000 ký tự")
     @Pattern(regexp = "^[^@;.=\\-+]*$", message = "Thể loại nhạc chỉ được chứa dấu phẩy ',' và không có ký tự đặc biệt khác")
-    @Column(name = "path_music",columnDefinition = "VARCHAR(1000)")
+    @Column(name = "path_music",columnDefinition = "TEXT")
     private String pathMusic;
 }

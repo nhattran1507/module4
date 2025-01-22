@@ -19,18 +19,18 @@ public class User {
     private int id;
 
     @NotBlank(message = "First name is not empty")
-    @Size(min = 5, max = 45, message = "First name must be between 5 and 45 Character")
-    @Column(name = "first name", columnDefinition = "VARCHAR(50)")
+    @Size(min = 5, max = 50, message = "First name must be between 5 and 45 Character")
+    @Column(name = "first_name", columnDefinition = "VARCHAR(50)")
     private String firstName;
 
     @NotBlank(message = "Last name is not empty")
-    @Size(min = 5, max = 45, message = "Last name must be between 5 and 45 Character")
-    @Column(name = "last name", columnDefinition = "VARCHAR(50)")
+    @Size(min = 5, max = 50, message = "Last name must be between 5 and 45 Character")
+    @Column(name = "last_name", columnDefinition = "VARCHAR(50)")
     private String lastName;
 
-    @NotEmpty
+    @NotBlank
     @Pattern(regexp = "^(\\+?[0-9]{1,4}[0-9]{9}|0[0-9]{9})$", message = "Phone Number is Invalid")
-    @Column(name = "number phone", columnDefinition = "VARCHAR(15)")
+    @Column(name = "number_phone", columnDefinition = "VARCHAR(15)", unique = true)
     private String phone;
 
     @NotNull(message = "Age must not be null")
@@ -38,8 +38,8 @@ public class User {
     @Column(name = "age", columnDefinition = "INT")
     private int age;
 
-    @NotEmpty(message = "Email must not be empty")
+    @NotBlank(message = "Email must not be empty")
     @Pattern(regexp = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,6}$", message = "Email should be valid")
-    @Column(name = "email", columnDefinition = "VARCHAR(50)")
+    @Column(name = "email", columnDefinition = "VARCHAR(50)", unique = true)
     private String email;
 }
